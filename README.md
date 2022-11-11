@@ -10,7 +10,7 @@ which redefines REC as an anchor-text matching problem and achieves weakly super
 optimization via anchor-based contrastive learning.
 
 <p align="center">
-	<img src="./misc/RefCLIP.png">
+	<img src="./misc/RefCLIP.png" width="1000">
 </p>
 
 ## Installation
