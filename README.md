@@ -5,9 +5,12 @@
 
 
 This is the official implementation of "RefCLIP: A Universal Teacher for 
-Weakly Supervised Referring Expression Comprehension", 
-which redefines REC as an anchor-text matching problem and achieves weakly supervised
-optimization via anchor-based contrastive learning.
+Weakly Supervised Referring Expression Comprehension".
+In this paper,we propose a novel one-stage contrastive model called
+RefCLIP, which achieves weakly supervised REC via anchor-based cross-modal contrastive learning.
+Based on RefCLIP, we propose a weakly supervised
+training scheme for common REC models, that is, to
+train any REC model by means of pseudo-labels.
 
 <p align="center">
 	<img src="./misc/RefCLIP.png" width="1000">
