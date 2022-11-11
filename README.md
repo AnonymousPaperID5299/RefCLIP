@@ -69,6 +69,10 @@ The project structure should look like the following:
      | -- models
      | -- utils
 ```
+- NOTE: our YoloV3 is trained on COCO’s training images, 
+excluding those in RefCOCO, RefCOCO+, and RefCOCOg’s validation+testing. 
+To guarantee anonymity, we will release the pre-trained weights after the paper 
+is accepted.
 
 ## RefCLIP
 
