@@ -223,52 +223,6 @@ def loader(__C,dataset: torch.utils.data.Dataset, rank: int, shuffle,drop_last=F
                                  drop_last=drop_last)
     return data_loader
 
-if __name__ == '__main__':
-
-    class Cfg():
-        def __init__(self):
-            super(Cfg, self).__init__()
-            self.ANN_PATH= {
-                'refcoco': './data/anns/refcoco.json',
-                'refcoco+': './data/anns/refcoco+.json',
-                'refcocog': './data/anns/refcocog.json',
-                'vg': './data/anns/vg.json',
-            }
-
-            self.IMAGE_PATH={
-                'refcoco': './data/images/train2014',
-                'refcoco+': './data/images/train2014',
-                'refcocog': './data/images/train2014',
-                'vg': './data/images/VG'
-            }
-
-            self.MASK_PATH={
-                'refcoco': './data/masks/refcoco',
-                'refcoco+': './data/masks/refcoco+',
-                'refcocog': './data/masks/refcocog',
-                'vg': './data/masks/vg'}
-            self.INPUT_SHAPE = (416, 416)
-            self.USE_GLOVE = True
-            self.DATASET = 'vg'
-            self.MAX_TOKEN = 15
-            self.MEAN = [0., 0., 0.]
-            self.STD = [1., 1., 1.]
-    cfg=Cfg()
-    dataset=RefCOCODataSet(cfg,'val')
-    data_loader = DataLoader(dataset,
-                             batch_size=10,
-                             shuffle=False,
-                             pin_memory=True)
-    for _,ref_iter,image_iter, mask_iter, box_iter,words,info_iter in data_loader:
-        print(ref_iter)
-        # print(image_iter.size())
-        # print(mask_iter.size())
-        # print(box_iter.size())
-        # print(ref_iter.size())
-        # # cv2.imwrite('./test.jpg', image_iter.numpy()[0].transpose((1, 2, 0))*255)
-        # # cv2.imwrite('./mask.jpg', mask_iter.numpy()[0].transpose((1, 2, 0))*255)
-        # print(info_iter.size())
-        # print(info_iter)
 
 
 
